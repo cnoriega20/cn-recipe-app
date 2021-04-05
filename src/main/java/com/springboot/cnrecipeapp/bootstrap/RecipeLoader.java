@@ -8,12 +8,14 @@ import com.springboot.cnrecipeapp.repositories.RecipeRepository;
 import com.springboot.cnrecipeapp.repositories.UnitOfMeasureRepository;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class RecipeLoader implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
