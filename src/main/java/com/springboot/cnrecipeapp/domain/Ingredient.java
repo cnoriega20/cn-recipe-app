@@ -1,7 +1,5 @@
 package com.springboot.cnrecipeapp.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,9 +7,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 public class Ingredient {
 
@@ -35,5 +31,10 @@ public class Ingredient {
         this.recipe = recipe;
     }
 
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom) {
+        this.description = description;
+        this.amount = amount;
+        this.uom = uom;
+    }
 
 }
