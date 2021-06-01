@@ -120,7 +120,7 @@ public class RecipeLoader implements ApplicationListener<ContextRefreshedEvent> 
                 "\n" +
                 "\n" +
                 "Read more: http://www.simplyrecipes.com/recipes/perfect_guacamole/#ixzz4jvoun5ws");
-       // guacNotes.setRecipe(guacRecipe);
+        guacNotes.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNotes);
 
 
@@ -135,6 +135,9 @@ public class RecipeLoader implements ApplicationListener<ContextRefreshedEvent> 
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
+
+        //add to recipe's list
+        recipes.add(guacRecipe);
 
         // Add to return list
         Recipe tacosRecipe  = new Recipe();
@@ -168,6 +171,7 @@ public class RecipeLoader implements ApplicationListener<ContextRefreshedEvent> 
         tacoNotes.setRecipe(tacosRecipe);
         tacosRecipe.setNotes(tacoNotes);
 
+        tacosRecipe.addIngredient(new Ingredient("Ancho Chili Powder", new BigDecimal(1), teaSpoonUom));
         tacosRecipe.addIngredient(new Ingredient("Dried Oregano", new BigDecimal(1), teaSpoonUom));
         tacosRecipe.addIngredient(new Ingredient("Dried Cumin", new BigDecimal(1), teaSpoonUom));
         tacosRecipe.addIngredient(new Ingredient("Sugar", new BigDecimal(1), teaSpoonUom));
@@ -183,6 +187,7 @@ public class RecipeLoader implements ApplicationListener<ContextRefreshedEvent> 
         tacosRecipe.addIngredient(new Ingredient("radishes, thinly sliced", new BigDecimal(4), eachUom));
         tacosRecipe.addIngredient(new Ingredient("cherry tomatoes, halved", new BigDecimal(".5"), pintUom));
         tacosRecipe.addIngredient(new Ingredient("red onion, thinly sliced", new BigDecimal(".25"), eachUom));
+        tacosRecipe.addIngredient(new Ingredient("Roughly chopped cilantro", new BigDecimal("4"), eachUom));
         tacosRecipe.addIngredient(new Ingredient("cup sour cream thinned with 1/4 cup milk", new BigDecimal(4), cupsUom));
         tacosRecipe.addIngredient(new Ingredient("lime, cut into wedges", new BigDecimal(4), eachUom));
 
